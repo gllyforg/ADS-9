@@ -1,10 +1,9 @@
 // Copyright 2022 NNTU-CS
-#include "tree.h"
-
 #include <chrono>
 #include <iostream>
 #include <random>
 #include <vector>
+#include "tree.h"
 
 void permsTime(int n) {
     std::vector<char> vector;
