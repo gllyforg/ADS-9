@@ -47,7 +47,7 @@ class PMTree {
     Node* getRootNode() {
         return root;
     }
-    void createBufferPerms(Node* root, std::vector<char>& buffer, 
+    void createBufferPerms(Node* root, std::vector<char>& buffer,
 std::vector<std::vector<char>>& result) {
         if (root == nullptr)
             return;
