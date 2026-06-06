@@ -36,7 +36,7 @@ class PMTree {
     }
 
  public:
-    PMTree(std::vector<char> vec) {
+    explicit PMTree(std::vector<char> vec) {
         root = new Node;
         root->data = '*';
         addNodes(root, vec);
@@ -47,7 +47,8 @@ class PMTree {
     Node* getRootNode() {
         return root;
     }
-    void createBufferPerms(Node* root, std::vector<char>& buffer, std::vector<std::vector<char>>& result) {
+    void createBufferPerms(Node* root, std::vector<char>& buffer, 
+std::vector<std::vector<char>>& result) {
         if (root == nullptr)
             return;
         if (root->children.empty()) {
