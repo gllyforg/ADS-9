@@ -1,9 +1,9 @@
 // Copyright 2022 NNTU-CS
 #include "tree.h"
-#include <iostream>
-#include <vector>
-#include <random>
 #include <chrono>
+#include <iostream>
+#include <random>
+#include <vector>
 
 void permsTime(int n) {
     std::vector<char> vector;
@@ -19,24 +19,24 @@ void permsTime(int n) {
         getPerm1(tree, rand_num);
         auto end1 = std::chrono::high_resolution_clock::now();
         auto duration1 = std::chrono::duration<double>(end1 - start1);
-        std::cout << "Time (getPerm1): " 
-            << duration1.count() * 1000 << " ms" 
+        std::cout << "Time (getPerm1): "
+            << duration1.count() * 1000 << " ms"
             << std::endl;
 
         auto start2 = std::chrono::high_resolution_clock::now();
         getPerm2(tree, rand_num);
         auto end2 = std::chrono::high_resolution_clock::now();
         auto duration2 = std::chrono::duration<double>(end2 - start2);
-        std::cout << "Time (getPerm2): " 
-            << duration2.count() * 1000 << " ms" 
+        std::cout << "Time (getPerm2): "
+            << duration2.count() * 1000 << " ms"
             << std::endl;
 
         auto start3 = std::chrono::high_resolution_clock::now();
         getAllPerms(tree);
         auto end3 = std::chrono::high_resolution_clock::now();
         auto duration3 = std::chrono::duration<double>(end3 - start3);
-        std::cout << "Time (getAllPerms): " 
-            << duration3.count() * 1000 << " ms" 
+        std::cout << "Time (getAllPerms): "
+            << duration3.count() * 1000 << " ms"
             << std::endl;
     }
 }
